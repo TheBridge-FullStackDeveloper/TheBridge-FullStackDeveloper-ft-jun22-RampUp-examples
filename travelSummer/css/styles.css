@@ -61,11 +61,12 @@ tr:hover > td{
                                         /* Experiencias flexbox */
 
 #expSection>article>img{
+    border-radius: 20px;
     display: block;
-    cursor: pointer;
 }
 
 #expSection{
+    cursor: pointer;
     width: 100%;
     height: 100%;
     display: flex;
@@ -81,18 +82,26 @@ tr:hover > td{
 
 #expSection>article{
     position: relative;
+    margin: 20px 20px;
 }
 
 .overlay{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     transition: .5s ease;   
     background-color: #008CBA;
     opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
 }
 
 .text{
     color: white;
     font-size: 20px;
-    transform: translate(-50%, -50%);
-    text-align: center;
 }
