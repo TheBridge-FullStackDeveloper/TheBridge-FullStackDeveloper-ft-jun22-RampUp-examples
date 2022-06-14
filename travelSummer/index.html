@@ -5,20 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/icons8-playa-48.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/icons8-playa-48.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Travel Planner</title>
 </head>
 
 <body>
     <header>
-        Aquí el header
+        <!-- nav>ul>li*8>a -->
+        <nav>
+            <ul>
+                <li><a href="#brief">Home</a></li>
+                <li><a href="#must_visit">Recomendaciones</a></li>
+                <li><a href="#places">Destinos</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="./pages/media.html">Media</a></li>
+                <li><a href="./pages/experiences.html">Experiencias</a></li>
+            </ul>
+        </nav>
+        
     </header>
     <main>
         <h1>Travel Planner - Mi web de viajes</h1>
 
         <section id="brief">
-            <h2>¿Viajamos juntos?</h2>
+            <h2>¿Viajamos a sitios únicos?</h2>
             <h3>Prepárate para un viaje inolvidable.</h3>
             <p>Aliquam erat volutpat. <b>Sed ornare eleifend</b> Sed ornare eleifend sapien quis egestas. Vestibulum
                 ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque at metus at
@@ -28,7 +41,7 @@
                 consequat ac.</p>
 
             <figure>
-                <img id="rock_restaurant" src="./assets/amazing-place-daniela-white.jpg"
+                <img id="rock_restaurant" src="./assets/img/amazing-place-daniela-white.jpg"
                     alt="Rock_restaurant">
                 <figcaption>Viaje inolvidable - Rock restaurant</figcaption>
             </figure>
@@ -80,6 +93,48 @@
 
             <!-- ul>(li>h3+p)*3  -->
             <!-- esto es un comentario -->
+        </section>
+        <section>
+            <h2>Top 5</h2>
+            <!-- table>tr*5>td*4 -->
+            <table>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Nombre</th>
+                    <th>Ubicación</th>
+                    <th>Información</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Torre Eiffel</td>
+                    <td>París, Francia</td>
+                    <td><a href="">info</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Coliseo Romano</td>
+                    <td>Roma, Italia</td>
+                    <td><a href="">info</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Estatua de la libertad</td>
+                    <td>Nueva York, USA</td>
+                    <td><a href="">info</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Machu Picchu</td>
+                    <td>Perú</td>
+                    <td><a href="">info</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Acrópolis</td>
+                    <td>Atenas, Grecia</td>
+                    <td><a href="">info</a></td>
+                </tr>
+            </table>
         </section>
     </main>
     <footer>Esto es el footer</footer>

@@ -1,7 +1,57 @@
+*{
+ font-family: Arial, Helvetica, sans-serif;   
+}
+/**********Selector por nombre de etiqueta*****/
 body{
-    background-color: antiquewhite;
+    background-color: #F8EDEB;
+}
+/**********Selectores anidados************/
+nav > ul > li{
+    list-style:none;
+    display: inline;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    color:black;
 }
 
+header{
+    background-color: #FEC89A;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 2px solid #D8E2DC;
+  }
+
+
+tr:hover > td{
+    background-color: #FEC5BB;
+}
+
+
+
+
+/**********Selector por ID************/
 #rock_restaurant {
     width:100%;
+}
+
+#beach {
+    width:50%;
+}
+
+.center{
+    text-align: center;
+}
+
+.video{
+    width:600px;
+    height:400px;
 }
