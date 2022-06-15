@@ -6,9 +6,16 @@ body{
     background-color: #F8EDEB;
 }
 /**********Selectores anidados************/
+nav,ul,li{
+    height: 100%;
+}
 nav > ul > li{
     list-style:none;
     display: inline;
+    padding: 24px 4px 25px 4px;
+}
+nav > ul > li:hover{
+    background-color: #F8EDEB;
 }
 nav > ul > li > a {
     text-decoration: none;
@@ -17,6 +24,8 @@ nav > ul > li > a {
 
 header{
     background-color: #FEC89A;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 table {
@@ -35,19 +44,26 @@ tr:hover > td{
     background-color: #FEC5BB;
 }
 
+h1{
+    background-color:#FEC5BB;
+    padding:40px 0;
+}
+
+h2{
+    background-color:#D8E2DC;
+    padding:20px 0;
+}
+
 
 
 
 /**********Selector por ID************/
-#rock_restaurant {
-    width:100%;
-}
 
-#beach {
+#rock_restaurant, #beach {
     width:50%;
 }
 
-.center{
+.center, h1, h2, h3{
     text-align: center;
 }
 
@@ -104,4 +120,35 @@ tr:hover > td{
 .text{
     color: white;
     font-size: 20px;
+}
+
+
+#contact>form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+input[type=text],input[type=email],textarea {
+    width: 50%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+input[type=text]:focus,input[type=email]:focus,textarea:focus {
+    background-color: #FEC5BB;
+}
+
+input[type=submit]{
+    width: 100px;
+    height:30px;
+    transition-duration: 0.4s;
+}
+input[type=submit]:hover{
+    background-color: #FEC89A;
 }
