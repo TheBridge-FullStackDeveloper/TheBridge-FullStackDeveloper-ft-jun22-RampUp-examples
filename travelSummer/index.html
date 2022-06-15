@@ -12,9 +12,10 @@
 
 <body>
     <header>
+        
         <!-- nav>ul>li*8>a -->
         <nav>
-            <ul>
+            <ul class="center">
                 <li><a href="#brief">Home</a></li>
                 <li><a href="#must_visit">Recomendaciones</a></li>
                 <li><a href="#places">Destinos</a></li>
@@ -25,10 +26,10 @@
                 <li><a href="./pages/experiences.html">Experiencias</a></li>
             </ul>
         </nav>
-        
+
     </header>
     <main>
-        <h1>Travel Planner - Mi web de viajes</h1>
+        <h1 class="center">Travel Planner - Mi web de viajes</h1>
 
         <section id="brief">
             <h2>¿Viajamos a sitios únicos?</h2>
@@ -40,9 +41,8 @@
                 lacus ac diam finibus, eget gravida orci pretium. Cras lobortis vulputate metus, sed aliquet augue
                 consequat ac.</p>
 
-            <figure>
-                <img id="rock_restaurant" src="./assets/img/amazing-place-daniela-white.jpg"
-                    alt="Rock_restaurant">
+            <figure class="center">
+                <img id="rock_restaurant" src="./assets/img/amazing-place-daniela-white.jpg" alt="Rock_restaurant">
                 <figcaption>Viaje inolvidable - Rock restaurant</figcaption>
             </figure>
         </section>
@@ -136,6 +136,51 @@
                 </tr>
             </table>
         </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form action="#contact">
+                <label for="fname">Nombre:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Introduce nombre..." minlength="3"
+                    maxlenght="30" required><br>
+
+                <label for="lname">Apellidos:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Introduce apellidos..." minlength="3"
+                    maxlenght="30" required><br>
+
+                <label for="fname">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Introduce email..." required><br><br>
+
+                <label for="places">¿Cuál es tu sitio favorito?:</label>
+                <select id="places" name="places">
+                    <option value="beach">playa</option>
+                    <option value="mountain">montaña</option>
+                    <option value="cities">ciudades</option>
+                    <option value="parks">parques de atracciones</option>
+                </select><br><br>
+
+                <label for="season">¿En qué época quieres viajar?</label><br>
+                <input type="radio" id="spring" name="season" value="spring">
+                <label for="spring">primavera</label><br>
+                <input type="radio" id="summer" name="season" value="summer">
+                <label for="summer">verano</label><br>
+                <input type="radio" id="autumn" name="season" value="autumn">
+                <label for="autumn">Otoño</label><br>
+                <input type="radio" id="winter" name="season" value="winter">
+                <label for="winter">Invierno</label><br>
+
+                <label for="comments">¿Observaciones?</label><br>
+                <textarea rows="2" cols="30" name="comments" wrap="hard"
+                    placeholder="Tus observaciones..."></textarea><br>
+
+                <label><input type="checkbox" id="accept" value="accept"> Acepto los términos legales</label><br>
+
+                <input type="checkbox" id="spam" value="spam"> <label for="spam">Acepto recibir publicidad</label><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+
+        </section>
+
     </main>
     <footer>Esto es el footer</footer>
 
