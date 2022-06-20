@@ -140,7 +140,7 @@ h2{
 
 
 input[type=text],input[type=email],textarea {
-    width: 50%;
+    width: 100%;
     padding: 12px 12px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -160,7 +160,7 @@ input[type=submit]{
 }
 input[type=submit]:hover{
     background-color: #FEC89A;
-    width: 50%;
+    width: 100%;
 }
 
 div.top{
@@ -181,9 +181,55 @@ div.top > a{
 }
 
 select {
-    width: 50%;
+    width: 100%;
     padding:10px;
     border-radius:4px;
     background-color: white;
     border: 2px solid black;
 }
+
+#menu-toggle{
+    display: none;
+    cursor: pointer;
+}
+
+
+
+#menu-toggle+label{
+    background: url("http://assets.stickpng.com/images/588a64e7d06f6719692a2d11.png") no-repeat;
+    height: 16px;
+    width: 16px;
+}
+
+nav>ul>li {
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 935px) {
+    #menu-toggle{
+        display: flex;
+    }
+    
+    nav>ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav>ul>li{
+        height: 0;
+        padding: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); 
+    }
+
+    #menu-toggle:checked ~ nav>ul>li{
+        height: 2em;
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    input[type=text],input[type=email],textarea,input[type=submit]:hover,select{
+        width: 50%;
+    }
+  }
