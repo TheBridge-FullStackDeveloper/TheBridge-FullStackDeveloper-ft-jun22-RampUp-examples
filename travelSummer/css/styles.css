@@ -193,21 +193,67 @@ select {
     cursor: pointer;
 }
 
-
-
-#menu-toggle+label{
-    background: url("http://assets.stickpng.com/images/588a64e7d06f6719692a2d11.png") no-repeat;
-    height: 16px;
-    width: 16px;
-}
-
 nav>ul>li {
     overflow: hidden;
 }
 
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
 @media only screen and (max-width: 935px) {
-    #menu-toggle{
+
+    .menu-button-container {
         display: flex;
+      }
+
+    #menu-toggle:checked + .menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+    }
+    
+    #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+    }
+    
+    #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+    }
+
+    .menu-button{
+        top: 23px;
+        left: 11px;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        display: block;
+        background-color: black;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+        
+    }
+
+    .menu-button::before {
+        content: '';
+        margin-top: -8px;
+    }
+
+    .menu-button::after {
+        content: '';
+        margin-top: 8px;
     }
     
     nav>ul{
