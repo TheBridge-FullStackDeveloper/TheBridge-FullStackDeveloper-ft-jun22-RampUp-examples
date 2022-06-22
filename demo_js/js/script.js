@@ -134,6 +134,56 @@ function calculateHypotenuse(a,b){
 }
 */
 
+let mensaje = "hola que tal te va la mañana";
+let words = []; // array con palabras
+let word = "";
+for (let i = 0; i <= mensaje.length; i++) {
+
+    if (mensaje[i] == " " || i == mensaje.length) {
+        //haz push. Mete palabra nueva en el array
+        words.push(word);
+        word = ""; // vaciar palabra
+        console.log("Es un espacio");
+    } else {
+        console.log("es el caracter: " + mensaje[i]);
+        word += mensaje[i];//h o l a
+    }
+    //console.log(mensaje[i]);
+}
+console.log(words);
+
+
+// Con Split
+let mensaje2 = "hola,que,tal,te,va,la,mañana";
+
+console.log(mensaje2.split(","));
+
+
+
+const person = {
+    firstName: "Alberto",
+    lastName: "Malaga",
+    "my-age": 25,
+    eyeColor: "blue",
+    walk: function () {
+        console.log("Malaga se va a dar un paseo");
+    },
+    eat: function (food) {
+        console.log("Malaga se va a comer "+food);
+    },
+    getInfo(){
+        return this.firstName + " " + this.lastName+" "+this["my-age"];
+    }
+};
+console.log(person["my-age"]);
+// console.log(person.my-age); // Error
+person.walk();
+person.eat("tortilla");
+person.getInfo();
+
+
+
+
 
 /*******Sección de ejecución******/
 //changeTrafficLight();
