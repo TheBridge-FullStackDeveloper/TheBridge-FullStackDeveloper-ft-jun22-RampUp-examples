@@ -244,8 +244,8 @@ console.log(products[3].rating.rate);
 /*******Sección de ejecución******/
 //changeTrafficLight();
 //changeTrafficLight2();
-//getOlympicYears();
-//getOlympicYears2(2010);
+getOlympicYears();
+getOlympicYears2(2010);
 //getOlympicYears3(2005);
 
 let res = add(2, 3);// guardas el resultado en una variable
@@ -257,5 +257,57 @@ let res2 = calculateHypotenuse(3, 4);
 console.log("La hipotenusa es:" + res2);
 
 console.log(tasteFruits());
+
+
+
+/******Manipulación del DOM ******/
+// Selectores
+
+// Leer: Acceso a un elemento por ID
+let txt = document.getElementById("hello").innerHTML;
+console.log("mensaje: " + txt);
+
+// Escribir: Cambiar el contenido de un párrafo
+document.getElementById("bye").innerHTML = "adios";
+
+// Selector por clase
+let superElements = document.getElementsByClassName("super-class");
+
+console.log(superElements[0].innerHTML);
+console.log(superElements[1].innerHTML);
+
+console.log("****Clases: Con bucle******");
+for (let i = 0; i < superElements.length; i++) {
+    superElements[i].innerHTML += " clase!!"; // Escribe
+    console.log(superElements[i].innerHTML); //Lee
+}
+console.log("****Etiquetas******");
+// Selector por etiqueta
+let pElements = document.getElementsByTagName("p");
+console.log(pElements);
+console.log("****Etiquetas: Con bucle******");
+for (let i = 0; i < pElements.length; i++) {
+    pElements[i].innerHTML += " jeje"; // Escribe
+    console.log(pElements[i].innerHTML); //Lee
+}
+
+// Eventos
+// Con función externa y variables
+let paragraph = document.getElementById("my-paragraph");
+let btn = document.getElementById("my-btn");
+
+function changeText() {
+    paragraph.innerHTML = "ey";
+    paragraph.style.backgroundColor = "orange";
+}
+
+btn.addEventListener("click",changeText);
+
+// Con función de callback y sin guardar nada en variables
+document.getElementById("bye").addEventListener("mouseover",function(event){
+    document.getElementById("hello").style.backgroundColor ="green";
+})
+
+
 
 
