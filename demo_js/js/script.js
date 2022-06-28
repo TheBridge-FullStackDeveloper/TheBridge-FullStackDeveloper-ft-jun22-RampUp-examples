@@ -308,6 +308,60 @@ document.getElementById("bye").addEventListener("mouseover",function(event){
     document.getElementById("hello").style.backgroundColor ="green";
 })
 
+//1- Hacer un boton que esconda/enseñe el texto de un parrafo cada vez que se pulsa el mismo boton. Por defecto, el párrafo debe estar visible
+
+let paragraph2 = document.getElementById("my-paragraph2");
+let btn2 = document.getElementById("my-btn2");
+
+function showHideText() {
+    // Show/Hide code
+    if(paragraph2.style.visibility === 'visible'){
+        paragraph2.style.visibility = 'hidden';
+    }else{ // hidden
+        paragraph2.style.visibility = 'visible';
+    }
+}
+
+btn2.addEventListener("click",showHideText);
+
+// Otra forma
+
+let paragraph3 = document.getElementById("my-paragraph3");
+let btn3 = document.getElementById("my-btn3");
+
+function showHideText2() {
+    paragraph3.classList.toggle("hide"); // añade quita clase
+}
+
+btn3.addEventListener("click",showHideText2);
+
+// Crear Nodos HTML desde JS
+let examples = document.getElementById("examples");
+
+let p = document.createElement("p");
+let text = document.createTextNode("Texto desde JS");
+p.appendChild(text); // p --> txt
+console.log(p);
+
+examples.appendChild(p); // div --> p
+
+
+// Query Selector
+
+let lista2 = document.querySelectorAll(".clase2 > a");
+
+// pruebas con selectores
+console.log(document.getElementById('miId1').innerText) // uno
+console.log(document.querySelector('#miDiv .miClase').innerText) // cinco
+console.log(document.querySelector('#miDiv #miId1.miClase').innerText) // uno
+console.log(document.querySelectorAll("#miDiv .miClase"));
+
+let dataDiv = document.querySelectorAll("#miDiv .miClase");
+for (let i = 0; i < dataDiv.length; i++) {
+    console.log(dataDiv[i].innerHTML); 
+}
+
+
 
 
 
