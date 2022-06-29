@@ -141,7 +141,7 @@
         </section>
         <section id="contact">
             <h2>Contacto</h2>
-            <form action="#contact">
+            <form action="#contact" id="contactForm">
                 <label for="fname">Nombre:</label>
                 <input type="text" id="fname" name="fname" placeholder="Introduce nombre..." minlength="3"
                     maxlenght="30" required>
@@ -175,9 +175,9 @@
                 <textarea rows="2" cols="30" name="comments" wrap="hard"
                     placeholder="Tus observaciones..."></textarea>
 
-                <label><input type="checkbox" id="accept" value="accept"> Acepto los términos legales</label>
+                <label><input type="checkbox" id="accept" value="accept" name="accept"> Acepto los términos legales</label>
 
-                <label for="spam"><input type="checkbox" id="spam" value="spam"> Acepto recibir publicidad</label>
+                <label for="spam"><input type="checkbox" id="spam" value="spam" name="spam"> Acepto recibir publicidad</label>
 
                 <input type="submit" value="Enviar">
                 
@@ -188,6 +188,7 @@
     </main>
     <footer>Esto es el footer</footer>
     <div class="top"><a href="#"> &#128285; Back to top &#9992;</a></div>
+<script src="js/script.js"></script>
 </body>
 
 </html>

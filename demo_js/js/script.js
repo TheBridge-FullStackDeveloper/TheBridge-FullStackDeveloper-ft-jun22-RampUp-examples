@@ -301,11 +301,11 @@ function changeText() {
     paragraph.style.backgroundColor = "orange";
 }
 
-btn.addEventListener("click",changeText);
+btn.addEventListener("click", changeText);
 
 // Con función de callback y sin guardar nada en variables
-document.getElementById("bye").addEventListener("mouseover",function(event){
-    document.getElementById("hello").style.backgroundColor ="green";
+document.getElementById("bye").addEventListener("mouseover", function (event) {
+    document.getElementById("hello").style.backgroundColor = "green";
 })
 
 //1- Hacer un boton que esconda/enseñe el texto de un parrafo cada vez que se pulsa el mismo boton. Por defecto, el párrafo debe estar visible
@@ -315,14 +315,14 @@ let btn2 = document.getElementById("my-btn2");
 
 function showHideText() {
     // Show/Hide code
-    if(paragraph2.style.visibility === 'visible'){
+    if (paragraph2.style.visibility === 'visible') {
         paragraph2.style.visibility = 'hidden';
-    }else{ // hidden
+    } else { // hidden
         paragraph2.style.visibility = 'visible';
     }
 }
 
-btn2.addEventListener("click",showHideText);
+btn2.addEventListener("click", showHideText);
 
 // Otra forma
 
@@ -333,7 +333,7 @@ function showHideText2() {
     paragraph3.classList.toggle("hide"); // añade quita clase
 }
 
-btn3.addEventListener("click",showHideText2);
+btn3.addEventListener("click", showHideText2);
 
 // Crear Nodos HTML desde JS
 let examples = document.getElementById("examples");
@@ -358,8 +358,71 @@ console.log(document.querySelectorAll("#miDiv .miClase"));
 
 let dataDiv = document.querySelectorAll("#miDiv .miClase");
 for (let i = 0; i < dataDiv.length; i++) {
-    console.log(dataDiv[i].innerHTML); 
+    console.log(dataDiv[i].innerHTML);
 }
+
+// Ejercicio listas
+const button = document.createElement('button');
+button.type = 'button';
+button.innerText = 'Haz Click';
+button.id = "button_list";
+document.body.appendChild(button);
+
+function displayList() {
+
+    let shopping_list = ["aguacate", "naranjas", "patatas", "lechuga", "guisantes", "lentejas", "cereales"];
+
+    let list = document.createElement('ul'); // Genera el UL
+
+    for (let i = 0; i < shopping_list.length; i++) {
+
+        let element = document.createElement('li'); // Genera el LI[i]
+        let elementText = document.createTextNode(shopping_list[i]);
+        // Crea nodo texto
+        //"aguacate","naranjas",...
+        element.appendChild(elementText); // li[i] --> txt[i]
+        list.appendChild(element); // ul --> li[i]
+    }
+
+    document.body.appendChild(list); // body --> ul
+
+
+}
+document.querySelector('#button_list').addEventListener("click", displayList);
+
+
+/**** Template String****/
+let food = "paella";
+let drink = "tinto";
+let description = "La paella de marisco es típica de Valencia";
+let url = "https://imag.bonviveur.com/paella-mixta.jpg";
+
+let message = `Hola, 
+hoy voy a comer ${food} y beber ${drink}`;
+
+console.log(message);
+/*
+<div>
+<h3>Paella</h3>
+<p>La paella es típica de Valencia</p>
+<img src="paella.png" alt="paella">
+</div>
+*/
+
+let card = `<div>
+                <h3>${food}</h3>
+                <p>${description}</p>
+                <img src=${url} alt=${food}>
+            </div>`;
+
+console.log(card);
+
+//document.querySelector("#mi_contenedor").innerHTML += card;
+document.body.innerHTML += card;
+
+
+
+
 
 
 
